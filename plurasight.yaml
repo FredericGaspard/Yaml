@@ -1,0 +1,87 @@
+
+# block sequences 
+# use tiret - espace et nom de l'item :
+- yaml
+- java
+- C#
+
+# Flow style, mettre un espace avant
+ [yaml, java, C#]
+
+# Nested sequences / List of list
+# les tirets indique que nous sommes dans une séquences. Donc avec les
+# tabs, nous sommes dans une séquence de séquences (list of list)
+-[1,2,3]
+-[A,B,C]
+## plusieurs façons de faire une list of list 
+### flow_list
+flow_list:
+ - [yaml, json]
+ - [python, javascript]
+
+block_list:
+- 
+  - yaml
+  - json
+-
+  - python
+  - javascript
+
+# Nested mapping. Mapping of mappings (object contain another object)
+ person :
+  name : Maaike
+  age : 30
+  address:
+    streetname : Langstraat
+    number: 1
+    zipcode : 1234AB
+    city : Amsterdam
+    country : The Netherlands
+  dog : { name : Bobby, breed : labradoodle}
+
+# Combining Sequences and Mappings
+languages:
+  - programming :
+    - frontend :
+      - html
+      - css
+      - js
+    - backend :
+      - java
+      - python
+      - C#
+  - data serialization :
+    - yaml
+    - json 
+
+# Dates 
+## scalar datetime timestamp
+timestamp : 2022-0322T22:1956.10+02:00
+simple_date : 2022-03-22
+not_a_date : !!str 2022-03-22
+
+# ==> !!str  spécifie que la valeur du champ est un string !
+
+## répétion de node. Utilisation de & (noeud à répéter) et * (répétition du noeud)
+person : &person #ici on dit que le noeud sera répéter
+ name: Maaike
+ age: 30
+address:
+  streetname: Langstraat
+  number:1
+
+another_person : *person #répétition de person pour another_person
+
+yet_another_person:
+  <<: *person #ici on copie personne mais en indiquant que certains chmamps changent : name. Important d'utiliser <<
+  name: maria
+
+## TAGS 
+!!str # tag string
+!!int # int tag
+
+
+# Schemas (YAML Validations)
+- Failsafe Schema
+- Json schema
+- Core schema

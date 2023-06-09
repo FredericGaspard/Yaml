@@ -1,0 +1,8 @@
+config: &db
+  database_name: dbname
+  password: superpwd
+configprod: *db
+
+config_other_prod:
+  <<: *db
+  password: pwdProd

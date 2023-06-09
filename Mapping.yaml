@@ -1,0 +1,10 @@
+---
+# block style
+key : value
+list:
+ - firstItem
+ - second l'item
+flowlist: [just, a list, in flow, style]
+
+# flow style
+{ key: value, another: value, version: 1.2.2 }

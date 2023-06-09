@@ -1,0 +1,14 @@
+# Playbook mediawiki avec 2 tasks
+---
+- name : "MediaWiki db configuration"
+  hosts : db
+  gather_facts: no 
+  tags: ["mariadb","mysql"]
+  roles:
+    - role: "mediawiki/confdb"
+- name : "MediaWiki Apache configuration"
+  hosts: apache
+  gather_facts: no
+  tags: "apache"
+  roles : 
+    - role : "mediawiki/confapache"

@@ -1,0 +1,19 @@
+#one file can contain multiple documents
+# documents are separated by : ---
+# can be ended by : ...
+
+# exemple here, with more documents
+tool: yaml
+version: 1.2
+nothing: null
+duplicatedKeys: not allowed in same document
+---
+tis is a new document
+---
+one file can contain multiple documents
+---
+key: value
+---
+key: value 
+comment: duplicate authorise cause we are not in a same document
+

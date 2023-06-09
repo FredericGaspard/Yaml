@@ -1,0 +1,6 @@
+---
+- name : "Installation Apache"  # jeux instructions
+  hosts : http1                 # node concerné
+  roles :                       # section rôle
+    - role : "apache"           # rôle à lancer
+      php_install : yes         # variable et valeur

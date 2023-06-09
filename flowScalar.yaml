@@ -1,0 +1,11 @@
+
+# this is a comment
+# again in comment
+
+tool: yaml
+version: 1.2.2
+awesome: "ok"
+duplicatedKeys: not allowed
+singlequote: 'replace by double quotes when you save the file?'
+escape: "she said \"escaping can only be done in double quote"
+escape2: test duplicatedKeys not allowed

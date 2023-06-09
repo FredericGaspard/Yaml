@@ -1,0 +1,11 @@
+person:
+  - name : Maaike
+    age : 30
+    address:
+      streetname: Yaml streetname
+      number: 1
+      zipcode : 12345
+      country : The Netherlands
+  - name : elias
+    age : 34
+    address: { streetname: Yaml streetname, number: 1} # ATTENION pas une bonne ptratique. On ne doit combiner du block style avec du flow style

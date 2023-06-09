@@ -1,0 +1,13 @@
+multi-line: >
+ du text bla bla
+ bla bla
+
+ and d'autres
+  indentation
+ retour à la ligne
+
+
+option: >+
+or: >-
+
+chomping: with |
